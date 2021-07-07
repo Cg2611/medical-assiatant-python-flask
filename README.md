@@ -1,6 +1,6 @@
 # medical-assiatant-python-flask
 
-#Prerequisite
+# Prerequisite
 1. Html/css/javascript
 2. Basic python
 3. Python flask frame work
@@ -21,7 +21,7 @@
 
 
 
-# work flow
+# Work Flow
 1. Install python with any ide like pycharm, spyder, vs code etc.
 
 2. Download this project
