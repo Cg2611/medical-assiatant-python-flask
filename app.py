@@ -7,11 +7,11 @@ from mysql import connector
 
 app = Flask(__name__)
 app.secret_key = 'your secret key'
-app.config['MYSQL_HOST'] = 'sql6.freemysqlhosting.net'
-app.config['MYSQL_USER'] = 'sql6423365'
-app.config['MYSQL_PASSWORD'] = 'hi38ImF7es'
+app.config['MYSQL_HOST'] = 'sql12.freemysqlhosting.net'
+app.config['MYSQL_USER'] = 'sql12538682'
+app.config['MYSQL_PASSWORD'] = '2lTH75ycyC'
 app.config['MYSQL_PORT'] = 3306
-app.config['MYSQL_DB'] = 'sql6423365'
+app.config['MYSQL_DB'] = 'sql12538682'
 
 mysql = MySQL(app)
 
