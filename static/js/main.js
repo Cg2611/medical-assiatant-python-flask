@@ -241,27 +241,34 @@ jQuery(document).ready(function($) {
 	siteStellar();
 
 	var siteCountDown = function() {
-
-		$('#date-countdown').countdown('2020/10/10', function(event) {
-		  var $this = $(this).html(event.strftime(''
-		    + '<span class="countdown-block"><span class="label">%w</span> weeks </span>'
-		    + '<span class="countdown-block"><span class="label">%d</span> days </span>'
-		    + '<span class="countdown-block"><span class="label">%H</span> hr </span>'
-		    + '<span class="countdown-block"><span class="label">%M</span> min </span>'
-		    + '<span class="countdown-block"><span class="label">%S</span> sec</span>'));
+		// Get the current date and time
+		var currentDate = new Date();
+	
+		$('#date-countdown').countdown(currentDate, function(event) {
+			var $this = $(this).html(event.strftime(''
+				+ '<span class="countdown-block"><span class="label">%w</span> weeks </span>'
+				+ '<span class="countdown-block"><span class="label">%d</span> days </span>'
+				+ '<span class="countdown-block"><span class="label">%H</span> hr </span>'
+				+ '<span class="countdown-block"><span class="label">%M</span> min </span>'
+				+ '<span class="countdown-block"><span class="label">%S</span> sec</span>'));
 		});
-
 	};
 	siteCountDown();
+	
 
 	var siteDatePicker = function() {
-
-		if ( $('.datepicker').length > 0 ) {
-			$('.datepicker').datepicker();
+		if ($('.datepicker').length > 0) {
+			$('.datepicker').datepicker({
+				minDate: new Date(2024, 0, 24), // Set minimum date to January 24, 2024
+				maxDate: '+1Y', // Set maximum date to 1 year in the future
+				dateFormat: 'dd-mm-yy' // Adjust date format to match your input
+			});
 		}
-
 	};
+	
+	
 	siteDatePicker();
+	
 
 	var siteSticky = function() {
 		$(".js-sticky-header").sticky({topSpacing:0});
